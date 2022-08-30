@@ -4,13 +4,12 @@ import com.ms.email.enums.StatusEmail;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
 @Table(name = "TB_EMAIL")
-public class Email implements Serializable {
+public class EmailModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
@@ -25,7 +24,7 @@ public class Email implements Serializable {
     private LocalDateTime sendDateEmail;
     private StatusEmail statusEmail;
 
-    public Email() {
+    public EmailModel() {
     }
 
     public UUID getId() {
